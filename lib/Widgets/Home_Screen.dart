@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 trailing: CircleAvatar(
-                  radius: 30,
+                  radius: 25,
                   backgroundImage: AssetImage('assets/images/profile.jpg'),
                 ),
               ),

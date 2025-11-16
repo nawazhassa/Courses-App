@@ -84,6 +84,8 @@ flutter:
   - family: Inter
     fonts:
       - asset: assets/fonts/Inter-VariableFont_opsz,wght.ttf
+        weight: 800
+
       - asset: assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf
   - family: Momo
     fonts:
