@@ -369,6 +369,7 @@ class LoginScreen extends StatelessWidget {
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 20.h),
         width: double.infinity,
+        height: double.infinity,
         decoration: const BoxDecoration(
           gradient: primaryGradient,
         ),
