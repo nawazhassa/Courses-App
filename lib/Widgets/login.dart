@@ -360,12 +360,13 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
-        statusBarColor: Colors.transparent,
+        // statusBarColor: Colors.transparent,
         statusBarIconBrightness: Brightness.dark,
       ),
     );
 
     return Scaffold(
+
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 24.w, vertical: 20.h),
         width: double.infinity,

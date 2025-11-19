@@ -202,12 +202,35 @@ class SearchScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.light,
+      ),
+    );
+
+
+
     return Scaffold(
+      extendBodyBehindAppBar: true, // 👈 AppBar ko gradient ke upar le jata hai
+      appBar: AppBar(
+        backgroundColor: Colors.transparent, // 👈 transparent AppBar
+        elevation: 0,
+        leading: IconButton(
+          icon: CircleAvatar(
+            radius: 20.r,
+            backgroundColor: Colors.grey.withOpacity(0.4),
+            child: Icon(Icons.arrow_back, color: Colors.white, size: 24.sp),
+          ),
+          onPressed: () => Navigator.pop(context),
+        ),
+      ),
       body: Stack(                          // ← Stack use karo overlap ke liye
         children: [
           // ========= TOP HERO IMAGE =========
           SizedBox(
-            height: double.infinity.h,                    // thoda zyada height for better overlap
+            height: double.infinity,                    // thoda zyada height for better overlap
             width: double.infinity,
             child: Stack(
               children: [
@@ -217,7 +240,7 @@ class SearchScreen extends StatelessWidget {
                   width: double.infinity,
                   height: double.infinity,
                 ),
-                Container(
+                /*Container(
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment.bottomCenter,
@@ -228,20 +251,16 @@ class SearchScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                ),
+                ),*/
                 // Back button
-                Positioned(
+               /* Positioned(
                   top: 50.h,
                   left: 20.w,
                   child: GestureDetector(
                     onTap: () => Navigator.pop(context),
-                    child: CircleAvatar(
-                      radius: 20.r,
-                      backgroundColor: Colors.black.withOpacity(0.4),
-                      child: Icon(Icons.arrow_back, color: Colors.white, size: 24.sp),
-                    ),
+                    child:
                   ),
-                ),
+                ),*/
                 // Info chips
                 Positioned(
                   bottom: 30.h,

@@ -7,6 +7,14 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        // statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.dark,
+      ),
+    );
     return Scaffold(
       /* appBar: AppBar(
         title: Text('home'),
@@ -18,6 +26,7 @@ class HomeScreen extends StatelessWidget {
         decoration: BoxDecoration(gradient: primaryGradient),
         child: SafeArea(
           child: SingleChildScrollView(
+            physics: BouncingScrollPhysics(),
             child: Column(
               // crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -65,12 +74,12 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
 
-                      SizedBox(height: 5), // 👈 yahan control karo spacing
+                      SizedBox(height: 5.h), // 👈 yahan control karo spacing
 
                       Text(
                         'Liza Rodriguez',
                         style: TextStyle(
-                          fontSize: 27.sp,
+                          fontSize: 30.sp,
                           fontWeight: FontWeight.bold,
                           color: primaryDark,
                         ),
@@ -269,7 +278,6 @@ class HomeScreen extends StatelessWidget {
                     SizedBox(
                       height: 80.h,
                       child: ListView(
-                        padding: EdgeInsets.zero,
                         scrollDirection: Axis.horizontal,
                         children: [
                           CourseCard(

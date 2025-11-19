@@ -1,12 +1,12 @@
 import '../imports.dart';
 import '../constants/colors.dart';
-class CourseCard extends StatelessWidget {
+class CourseCard1 extends StatelessWidget {
   final String imagePath;
   final String title;
   final String subtitle;
   final String progress;
 
-  const CourseCard({
+  const CourseCard1({
     super.key,
     required this.imagePath,
     required this.title,
@@ -17,7 +17,8 @@ class CourseCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 270.w,
+      width: double.infinity,
+      margin: EdgeInsets.symmetric(horizontal: 22.w,vertical: 5),
       padding: EdgeInsets.all(10.w),
       decoration: BoxDecoration(
         color: Colors.white,
